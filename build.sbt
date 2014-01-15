@@ -1,4 +1,4 @@
-name := "playapp"
+name := "argmaxx-playapp"
 
 version := "1.0-SNAPSHOT"
 

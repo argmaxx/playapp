@@ -1,7 +1,400 @@
 @(message: String)
 
-@main("Welcome to Play") {
+@main("Argmaxx | Smart prescriptive analytics") {
 
-    @play20.welcome(message, style = "Java")
+    <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle pull-right" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="/" class="navbar-brand"><img src="@routes.Assets.at("images/argmaxx/argmaxx_logo.png")" width="100"></a>
+            </div>
 
+            <div class="collapse navbar-collapse navbar-ex1-collapse" role="navigation">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#platform">Platform</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="http://blog.argmaxx.com" target="blog.argmaxx.com">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="feature_slider" class="lol">
+        <!-- 
+            Each slide is composed by <img> and .info
+            - .info's position is customized with css in index.css
+            - each <img> parallax effect is declared by the following params inside its class:
+            
+            example: class="asset left-472 sp600 t120 z3"
+            left-472 means left: -472px from the center
+            sp600 is speed transition
+            t120 is top to 120px
+            z3 is z-index to 3
+            Note: Maintain this order of params
+
+            For the backgrounds, you can combine from the bgs folder :D
+        -->
+        <article class="slide" id="slide1" style="background: url('@routes.Assets.at("images/argmaxx/duskoftherock.jpg")') repeat-x center center;">
+            <div class="info">
+                <h2>
+                    Connect your people, things &amp; services with modern AI
+                </h2>                
+            </div>
+        </article>        
+        <article class="slide" id="slide2" style="background: url('@routes.Assets.at("images/theme/backgrounds/color-splash-2.jpg")') repeat-x top center;">
+            <div class="info">
+                <h2>Smart prescriptive analytics for connected entities</h2>
+            </div>
+            <img class="asset left-260 sp650 t260 z3" src="@routes.Assets.at("images/theme/slides/scene3/ipad.png")"/>
+            <img class="asset left-165 sp500 t194 z2" src="@routes.Assets.at("images/theme/slides/scene3/desktop.png")"/>
+            <img class="asset left140 sp450 t320 z4" src="@routes.Assets.at("images/theme/slides/scene3/iphone.png")"/>
+        </article>
+        <article class="slide" id="slide3" style="background: url('@routes.Assets.at("images/argmaxx/fireworks.jpg")') repeat-x bottom center;">
+            <img class="asset left20 sp400 t160 z1" src="@routes.Assets.at("images/theme/slides/scene1/macbook.png")"/>
+            <img class="asset left100 sp400 t144 z2" src="@routes.Assets.at("images/argmaxx/flat/Graph-03-256.png")"/>
+            <img class="asset left80 sp700 t184 z3" src="@routes.Assets.at("images/argmaxx/gold-medal-hi.png")" width="41" height="60" />
+            <div class="info">
+                <h2>Ma<span>x</span>ximize the performance of your business</h2>
+            </div>
+        </article>
+    </section>
+
+    <!-- Pricing Option -->
+    <div id="showcase">
+        <div class="container">
+            <div class="row feature_wrapper">
+                <!-- Features Row -->
+                <div class="features_op1_row">
+                    <!-- Feature -->
+                    <div class="col-sm-4 feature first">
+                        <div class="text">
+                            <h6>Big data architecture</h6>
+                            <p>We deliver software solutions at the intersection of
+                            big data architecture and next-gen business analytics.</p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="col-sm-4 feature">
+                        <div class="text">
+                            <h6>Prescriptive analytics</h6>
+                            <p>We go beyond predictive analytics towards systems 
+                               that continuously analyze decisions and outcomes.</p>
+                        </div>
+                    </div>
+                    <!-- Feature -->
+                    <div class="col-sm-4 feature last">
+                        <div class="text">
+                            <h6>Artificial intelligence</h6>
+                            <p>We enhance business rules with AI techniques from 
+                               machine learning, game theory and agent simulation.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Service Option 2 -->
+    <div id="services">
+        <div class="container">
+            <div class="section_header">
+                <h3>Our Services</h3>
+            </div>
+            <div class="row perk">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2 circle">
+                    <img src="@routes.Assets.at("images/argmaxx/flat/Data-Settings-128.png")" width="48" alt="">
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8 description_wrapper">
+                    <h5>Software systems for advanced analytics </h5>
+                    <p>
+                        The definition of what's considered <i>big data</i> depends on the current analytic capabilities of your organization. If you are considering data and analytics beyond your existing capabilities, you have a big data problem. We can help you assess your current capabilities considering your immediate and future goals. We can then recommend, and optionally implement, a modern software system that satisfies your constraints for cost and functionality.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row perk">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2 circle">
+                    <img src="@routes.Assets.at("images/argmaxx/flat/Way-Board-128.png")" width="48" alt="">
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8 description_wrapper">
+                    <h5>Analytic models for your decision tasks</h5>
+                    <p>
+                        While the software systems we deliver can be used by your in-house business analysts and data scientists directly, we can also work alongside them to develop models &mdash; especially <i>prescriptive</i> analytics &mdash; for your specific business needs. Traditional <i>descriptive</i> analytics help you understand what happened and what's happening whereas <i>predictive</i> analytics provide insight into what's likely to happen. Prescriptive analytics take you a step further and evaluate the expected effects of your decision options under the predicted scenarios.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row perk last">
+                <div class="col-sm-1"></div>
+                <div class="col-sm-2 circle">
+                    <img src="@routes.Assets.at("images/argmaxx/flat/Nodes-128.png")" width="48" alt="">
+                </div>
+                <div class="col-sm-1"></div>
+                <div class="col-sm-8 description_wrapper">
+                    <h5>Smart agents for the Internet of Things</h5>
+                    <p>
+                        Our solutions can serve as tools for human decision-makers or be incorporated into fully 
+                        automated agent-based systems. We have a growing focus on the <i>Internet of Things</i> (IoT) within the context of distributed web-based software services and the people who interact with those things and services. If you would like to add adaptive and learning capabilities to your existing IoT products, or are considering new products or processes within your organization that exploit IoT opportunities, we can help you design and build such capabilities.
+                    </p>
+                </div>
+            </div>
+            
+        </div>
+    </div>     
+
+    <div id="platform">
+        <div class="container">
+            <div class="section_header">
+                <h3>Our Platform</h3>
+            </div> 
+            <div class="row feature">
+                <div class="col-sm-6 pic-right">
+                    <img src="@routes.Assets.at("images/theme/showcase2-temp.png")" class="pull-right img-responsive" />
+                    <!-- capture, storage, search, sharing, analysis, simulation, visualization, decisions, feedback -->
+                    <!-- capture, store, refine, search, share, analyze, simulate, visualize, decide, act, monitor -->
+                </div>
+                <div class="col-sm-6 info info-left">
+                    <h3>
+                        <img src="@routes.Assets.at("images/argmaxx/flat/Toolbox-Blue-128.png")" width="48" />
+                        Best of breed technology
+                    </h3>
+                    <p>
+                        Choosing software components for your big data solution is difficult. 
+                        We have evaluated scores of options and developed a modular platform that combines  
+                        best of breed components with our own proprietary AI components to create an intelligent 
+                        event-driven platform for data management, analytics processing and agent simulation. 
+                    </p>
+                </div>                
+            </div>
+            <div class="row feature last">
+                <div class="col-sm-6">
+                    <img src="@routes.Assets.at("images/theme/showcase1.png")" class="img-responsive" />
+                </div>
+                <div class="col-sm-6 info">
+                    <h3>
+                        <img src="@routes.Assets.at("images/argmaxx/flat/Tools-Blue-128.png")" width="48" />
+                        Custom implementations
+                    </h3>
+                    <p>
+                        The ideal big data and prescriptive analytics architecture for your business depends on what you consider to be 
+                        <i>real-time optimization</i>. We work with the requirements and constraints implied by that definition to customize 
+                        and extend our platform as needed to best handle the volume, velocity and variety of the 
+                        data to be analyzed.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div class="container">
+            <div class="section_header">
+                <h3>About Us</h3>
+            </div>
+            <div class="row services_circles">
+                <div class="col-sm-4 description">
+                    <div class="text active">
+                        <h4>Pragmatic approach</h4>
+                        <p>
+                            First and foremost, we are engineers. We believe in designing and building systems that comfortably meet their requirements and can stand the test of time. We recognize that new systems have to harmonize with existing systems, but we also embrace step changes for radical innovation. 
+                        </p>
+                    </div>
+                    <div class="text">
+                        <h4>Technical excellence</h4>
+                        <p>
+                            We reinforce our pragmatic approach with deep technical expertise. We have graduate degrees in computer science, machine learning/AI and finance from universities like UC Berkeley, Carnegie Mellon and Penn (Wharton). 
+                            We understand and exploit the science behind the technology we create.
+                        </p>
+                    </div>
+                    <div class="text">
+                        <h4>Relevant experience</h4>
+                        <p>
+                            Our expertise is valuable to you only if we can help solve your problems. We appreciate the role of business processes and their resistance to change. We have successfully built and deployed large-scale distributed systems in open-source, startup and Fortune 100 environments for over 17 years.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="col-sm-7 areas">
+                    <div class="circle active">
+                        <img src="@routes.Assets.at("images/argmaxx/flat/Puzzles-128.png")" width="64" />
+                        <span>Pragmatic</span>
+                    </div>
+                    <div class="circle">
+                        <img src="@routes.Assets.at("images/argmaxx/flat/Certificate-128.png")" width="64" />
+                        <span>Excellence</span>
+                    </div>
+                    <div class="circle last_circle">
+                        <img src="@routes.Assets.at("images/argmaxx/flat/Conference-Speaker-128.png")" width="64" />
+                        <span>Experience</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contact">
+        <div class="container">
+            <div class="link_padding"></div>
+            <div class="section_header">
+                <h3>Contact Us</h3>
+            </div>
+            <div class="row contact">
+                <p>Interested in working with us or learning more? Please get in touch, we'd love to hear from you!</p>
+                <form>
+                    <div class="row form">
+                        <div class="col-sm-6 row-col">
+                            <div class="box">
+                                <input class="name form-control" type="text" placeholder="Name">
+                                <input class="mail form-control" type="text" placeholder="Email">
+                                <input class="phone form-control" type="text" placeholder="Phone">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <div class="box">
+                                <textarea placeholder="Please tell us a little about your project..." class="form-control"></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row submit">
+                        <div class="col-md-5 box">
+                            <label class="checkbox">
+                                <input type="checkbox"> Sign up for our newsletter
+                            </label>
+                        </div>
+                        <div class="col-md-3 right">
+                            <input type="submit" value="Send message">
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="map">
+            <div class="container">
+                <div class="box_wrapp">
+                    <div class="box_cont">
+                        <ul class="street">
+                            <li><b>Argmaxx Inc.</b></li>
+                            <li>5145 Penton Road</li>
+                            <li>Pittsburgh, PA 15213</li>
+                            <li class="icon icontop">
+                                <span class="contacticos ico1"></span>
+                                <span class="text">+1 412 475 8575</span>
+                            </li>
+                            <li class="icon">
+                                <span class="contacticos ico2"></span>
+                                <a class="text" href="mailto:ppr@@argmaxx.com">ppr@@argmaxx.com</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <iframe width="100%" height="288" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/?ie=UTF8&amp;ll=40.441,-80.015&amp;t=m&amp;z=13&amp;output=embed"></iframe>
+        </div>
+    </div>    
+
+    <!-- starts footer -->
+    <footer id="footer">
+        <div class="container">
+            <div class="row sections">
+                <div class="col-sm-6 testimonials">
+                    <h3 class="footer_header">
+                        Testimonial
+                    </h3>
+                    <div class="wrapper">
+                        <div class="quote">
+                            <span>&ldquo;</span>
+                            <p>Prashant is an excellent technical architect and business communicator, whose sense for high-stakes technology problems has been fine-tuned by years of experience.</p> 
+                            <p>During our time in a firmwide infrastructure group at Morgan Stanley, Prashant not only demonstrated his mastery of technical concepts but was also essential to executing on key portions of the firm's infrastructure strategy.</p>
+                        </div>
+                        <div class="author">
+                            <!--img src="@routes.Assets.at("images/argmaxx/people/vishy-venugopalan.jpg")" /-->
+                            <div class="name">Vishy Venugopalan</div>
+                            <div class="info">
+                                Co-founder, Whalelogix
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 recent_posts">
+                    <h3 class="footer_header">
+                        From our blog
+                    </h3>
+                    <div class="post">
+                        <a href="http://blog.argmaxx.com" target="blog.argmaxx.com">
+                            <img src="@routes.Assets.at("images/theme/blogpost-ico.png")" width="36" />
+                        </a>
+                        <a href="http://blog.argmaxx.com" target="blog.argmaxx.com" class="title">
+                            <strong>Open or closed?</strong><br/>
+                        </a>
+                        <div class="date">
+                            January 21, 2014
+                        </div>
+                        <a href="http://blog.argmaxx.com" target="blog.argmaxx.com" class="title">
+                            Should you adopt open source components or go with a proprietary solution for your big data platform?
+                        </a>
+                    </div>
+                    <div class="post">
+                        <a href="http://blog.argmaxx.com" target="blog.argmaxx.com">
+                            <img src="@routes.Assets.at("images/theme/blogpost-ico.png")" width="36" />
+                        </a>
+                        <a href="http://blog.argmaxx.com" target="blog.argmaxx.com" class="title">
+                            <strong>R, Python and Julia</strong><br/>
+                        </a>
+                        <div class="date">
+                            January 14, 2014
+                        </div>
+                        <a href="http://blog.argmaxx.com" target="blog.argmaxx.com" class="title">
+                            Is there an analytics language that "R"ules them all, and who is Julia anyway?
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row credits">
+                <div class="col-md-12">
+                    <div class="row social">
+                        <div class="col-md-12">
+                            <a href="http://facebook.com/Argmaxx" class="facebook-xx">
+                                <span class="socialicons ico1"></span>
+                                <span class="socialicons_h ico1h"></span>
+                            </a>
+                            <a href="http://twitter.com/argmaxx" class="twitter">
+                                <span class="socialicons ico2"></span>
+                                <span class="socialicons_h ico2h"></span>
+                            </a>
+                            <a href="http://plus.google.com/Argmaxx" class="gplus">
+                                <span class="socialicons ico3"></span>
+                                <span class="socialicons_h ico3h"></span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="row copyright">
+                        <div class="col-md-12">
+                            &copy; 2014 Argmaxx Inc.
+                        </div>
+                    </div>
+                </div>            
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="text/javascript" src="http://code.jquery.com/jquery-latest.js"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/bootstrap.min.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/theme.js")"></script>
+    <script type="text/javascript" src="@routes.Assets.at("javascripts/index-slider.js")"></script>   
+    
 }
