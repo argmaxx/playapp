@@ -631,12 +631,19 @@
 
 		p {
 			color: #939394;
-			font-size: 19px;
+			font-size: 17px;
 			margin-bottom: 47px;
 			font-style: italic;
 			line-height: 24px;
 		}
 
+        .form-error {
+            font-size: 16px;
+            font-weight: bold;
+            color: #cc0000;
+            margin-bottom: 20px;
+        }
+        
 		form {
 			margin: 0;
 		}

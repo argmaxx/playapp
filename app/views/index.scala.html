@@ -1,4 +1,4 @@
-@(message: String)
+@(form: Form[models.ContactMessage])
 
 @main("Argmaxx | Smart prescriptive analytics") {
 
@@ -252,33 +252,43 @@
             </div>
             <div class="row contact">
                 <p>Interested in working with us or learning more? Please get in touch, we'd love to hear from you!</p>
-                <form>
+                
+                @if(form.hasGlobalErrors) {
+                    <div class="form-error">@form.globalError.message</div>
+                }
+                @helper.form(routes.Application.contact) {
                     <div class="row form">
                         <div class="col-sm-6 row-col">
                             <div class="box">
-                                <input class="name form-control" type="text" placeholder="Name">
-                                <input class="mail form-control" type="text" placeholder="Email">
-                                <input class="phone form-control" type="text" placeholder="Phone">
+                                <input required name="name" value="@form("name").value" class="name form-control" type="text" placeholder="Name">
+                                <input required name="email" value="@form("email").value" class="mail form-control" type="text" placeholder="Email">
+                                <input required name="phone" value="@form("phone").value" class="phone form-control" type="text" placeholder="Phone">
                             </div>
                         </div>
                         <div class="col-sm-6">
                             <div class="box">
-                                <textarea placeholder="Please tell us a little about your project..." class="form-control"></textarea>
+                                <textarea name="message" placeholder="Please tell us a little about your project..." class="form-control">@form("message").value</textarea>
                             </div>
                         </div>
                     </div>
-
+                    <div class="row submit">
+                        <div class="col-md-4 right">
+                            <input type="submit" value="Send message">
+                        </div>
+                    </div>
+                    <!-- 
                     <div class="row submit">
                         <div class="col-md-5 box">
                             <label class="checkbox">
-                                <input type="checkbox"> Sign up for our newsletter
+                                <input name="consent" value="checked" type="checkbox"> Sign up for our newsletter
                             </label>
                         </div>
                         <div class="col-md-3 right">
                             <input type="submit" value="Send message">
                         </div>
                     </div>
-                </form>
+                     -->
+                }
             </div>
         </div>
 
